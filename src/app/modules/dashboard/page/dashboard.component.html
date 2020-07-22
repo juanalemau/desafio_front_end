@@ -1,0 +1,65 @@
+<div class="dashboard d-flex" id="wrapper" *ngIf="!viewLoading">
+
+  <div class="dashboard__sidebar" id="sidebar-wrapper">
+    <div class="sidebar__heading" style="text-align: center;">Dashboard</div>
+    <app-dlt-detail
+      [image]="detailData.number_applications.icon_name"
+      [title]="detailData.number_applications.title"
+      [number]="detailData.number_applications.amount"
+      [color]="detailData.number_applications.color"></app-dlt-detail>
+    <hr class="line__space" />
+    <app-dlt-detail
+      [image]="detailData.integration_time.icon_name"
+      [title]="detailData.integration_time.title"
+      [number]="detailData.integration_time.amount"
+      [color]="detailData.integration_time.color"></app-dlt-detail>
+    <hr class="line__space"/>
+    <app-dlt-detail
+      [image]="detailData.billing_year.icon_name"
+      [title]="detailData.billing_year.title"
+      [number]="detailData.billing_year.amount"
+      [color]="detailData.billing_year.color"></app-dlt-detail>
+  </div>
+  <div class="dashboard__graphic" id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="dashboard__content__api">
+            <div class="dashboard__content__image">
+              <i-bs class="image" name="journal-text"></i-bs>
+            </div>
+            <div class="dashboard__content__title">
+              CONSUMO DA API
+            </div>
+          </div>
+          <hr class="line__space" />
+          <div>
+            <app-graphic-bar [dataBar]="graphData.api_consumption.data" [categoriesBar]="graphData.api_consumption.list_categories"></app-graphic-bar>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="dashboard__content__api">
+            <div class="dashboard__content__image">
+              <i-bs class="image" name="journal-text"></i-bs>
+            </div>
+            <div class="dashboard__content__title">
+              APLICAÇÔES
+            </div>
+          </div>
+          <hr class="line__space" />
+          <app-graphic-bar-column [dataBarColumn]="graphData.application_ambient.data"></app-graphic-bar-column>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <hr class="line__space" />
+          <app-graphic-bar-line [dataBarLine]="graphData.months_consumption.data" [categoriesBarLine]="graphData.months_consumption.list_categories"></app-graphic-bar-line>
+        </div>
+        <div class="col-sm-4">
+          <hr class="line__space" />
+          <app-graphic-pie [dataPie]="graphData.application_api.data"></app-graphic-pie>
+        </div>
+      </div>
+    </div>
+
+</div>

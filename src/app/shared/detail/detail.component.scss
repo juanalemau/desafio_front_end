@@ -1,0 +1,61 @@
+@import '../../../styles.scss';
+
+.detail {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+
+  .section__image {
+    padding: 30px;
+    border-radius: 50%;
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 25px;
+    line-height: 1.42;
+
+    &--default {
+      background: #7f7f7f;
+    }
+
+    &--primary {
+      background: #000000;
+    }
+
+    &--secondary {
+      background: #86bc25;
+    }
+
+    .detail__image {
+      color: white;
+    }
+  }
+
+  .section__description {
+    text-align: center;
+    font-weight: bold;
+    margin: 0 0 0 19px;
+
+    .description__title {
+      color: black;
+    }
+
+    .description__number {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.8rem;
+
+      &--default {
+        color: #7f7f7f;
+      }
+
+      &--primary {
+        color: #000000;
+      }
+
+      &--secondary {
+        color: #86bc25;
+      }
+    }
+  }
+}

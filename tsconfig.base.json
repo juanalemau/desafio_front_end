@@ -2,19 +2,27 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
     "importHelpers": true,
-    "target": "es2015",
-    "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "strict": true,
+    "target": "es5",
+    "module": "amd",
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "@app/*": ["app/core/*"],
+      "@shared/*": ["app/shared/*"],
+      "@env": ["environments/environment"],
+      "@modules/*": ["app/modules/*"]
+    },
+    "lib": ["es2018", "dom"]
   }
 }

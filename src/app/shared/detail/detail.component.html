@@ -1,0 +1,18 @@
+<div class="detail">
+  <div class="section__image" [ngClass]="{
+    'section__image--default': color === 'default',
+    'section__image--primary': color === 'primary',
+    'section__image--secondary': color === 'secondary'
+  }">
+    <i-bs class="detail__image"
+       name="{{image}}"></i-bs>
+  </div>
+  <div class="section__description" >
+    <div class="description__title">{{title}}</div>
+    <div class="description__number" [ngClass]="{
+      'description__number--default': color === 'default',
+      'description__number--primary': color === 'primary',
+      'description__number--secondary': color === 'secondary'
+    }">{{number}}</div>
+  </div>
+</div>
